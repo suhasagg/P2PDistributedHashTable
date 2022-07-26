@@ -11,6 +11,7 @@ import (
 )
 
 // dhtStore is used to persist the routing table on disk.
+// Very analogous to blockhain transaction, event, contract state, vm state stores (just curious if leveldb/rocks db can be used for serialisation) 
 type dhtStore struct {
 	// The rest of the stack uses string, but that confuses the json
 	// Marshaller. []byte is more correct anyway.
